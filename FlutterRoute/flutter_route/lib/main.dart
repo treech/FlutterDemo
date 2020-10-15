@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
           return MaterialPageRoute(builder: (context) {
             var routeName = settings.name;
             print('routeName:$routeName');
+            return null;
           });
         },
         debugShowCheckedModeBanner: false);

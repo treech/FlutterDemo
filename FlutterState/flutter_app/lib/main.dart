@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/MyContextPage.dart';
 import 'package:flutter_app/MyStateFulPage.dart';
 
 void main() {
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
             FlatButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return MyStateFulPage();
+                  return MyContextPage();
                 }));
               },
               child: Text('test for state'),

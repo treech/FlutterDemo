@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_route/Echo.dart';
 import 'package:flutter_route/NewRoute.dart';
 import 'package:flutter_route/RouteParamTest.dart';
 import 'package:flutter_route/TipRoute.dart';
@@ -84,6 +85,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: Text('open new route with param',
+                    style: TextStyle(fontSize: 16, color: Colors.blue)),
+                textColor: Colors.blue),
+            FlatButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Echo(text: 'test from main', backgroundColor: Color(0xFFBBDEFB));
+                  }));
+                },
+                child: Text('open new route with param ',
                     style: TextStyle(fontSize: 16, color: Colors.blue)),
                 textColor: Colors.blue)
           ],

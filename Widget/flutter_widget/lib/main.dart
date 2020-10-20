@@ -95,15 +95,73 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: TextStyle(
+                  color: Colors.red,
+                  background: Paint()..color = Colors.transparent,
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.dashed,
+                  fontSize: 20.0,
+                  height: 1.2,
+                  fontFamily: 'Courier'),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text.rich(TextSpan(
+              children: [
+                TextSpan(text: 'Home: '),
+                TextSpan(
+                  text: 'https://flutterchina.club',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ],
+            )),
+            RaisedButton(child: Text("RaisedButton"), onPressed: () {}),
+            FlatButton(child: Text("FlatButton"), onPressed: () {}),
+            OutlineButton(child: Text("OutlineButton"), onPressed: () {}),
+            IconButton(icon: Icon(Icons.thumb_up), onPressed: () {}),
+            RaisedButton.icon(
+                onPressed: () {}, icon: Icon(Icons.send), label: Text("send")),
+            FlatButton.icon(
+                onPressed: () {}, icon: Icon(Icons.add), label: Text("add")),
+            OutlineButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.info),
+                label: Text("details")),
+            RaisedButton(
+                color: Colors.blue,
+                highlightColor: Colors.blue[700],
+                colorBrightness: Brightness.dark,
+                splashColor: Colors.grey,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+                onPressed: () {},
+                child: Text("Submit")),
+            DefaultTextStyle(
+                style: TextStyle(fontSize: 32.0, color: Colors.blue),
+                textAlign: TextAlign.start,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text('孙悟空'),
+                    Text('宫本武藏',
+                        style: TextStyle(
+                            inherit: false,
+                            color: Colors.grey,
+                            fontSize: 32.0)),
+                    Text('宫本武藏',
+                        style: TextStyle(
+                            inherit: false,
+                            color: Colors.grey,
+                            fontFamily: 'Raleway',
+                            fontSize: 32.0))
+                  ],
+                ))
           ],
         ),
       ),
